@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');*/
+
+@font-face {
+    font-family: GothanBold;
+    src: url(fontes/Gotham-font/Gotham-Bold.otf) format(opentype);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GothanMedium;
+    src: url(fontes/Gotham-font/Gotham-Book.otf) format(opentype);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GothanBook;
+    src: url(fontes/Gotham-font/Gotham-Book.otf) format(opentype);
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #17182a;
+    --cor1: #FFFFFF;
+    --cor2: #F5F5F7;
+    --cor3: #C6C7D1;
+    --cor4: #585C7C;
+    --cor5: #3F7CAC;
+    --cor6: #A6DCEF;
+    --cor7: #D4A373;
+    --cor8: #06141b  ;
+ /* Fontes padrão a serem usadas com var() */
+--fonte-bold: 'GothanBold', sans-serif;
+--fonte-medium: 'GothanMedium', sans-serif;
+--fonte-book: 'GothanBook', sans-serif;
+}
+
+
+*{ /* Reset básico de estilos: zera margens e paddings, ajusta box-sizing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins'; sans-serif;*/
+}
+
+header img { /* Define a altura da logo no cabeçalho */
+    height: 80px; /* ou o tamanho que preferir */
+}
+
+html { 
+/* Define uma altura grande da página para testar a rolagem */
+    height: 500vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
+
+#titulo{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 50px;
+}
+
+
+.container{ /* Define a largura máxima do conteúdo e centraliza */
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{ /* Estiliza elementos com layout flexível (horizontal) */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{ /* Estilo básico do cabeçalho fixo no topo da tela */
+    width: 100%;
+    padding:  25px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+header.rolagem{ /* Estilo do cabeçalho quando a página é rolada */
+    background-color: var(--cor2);
+    padding:  10px 4%;
+}
+
+header.rolagem a{ /* Links dentro do header ao rolar ficam com cor diferente */
+    color: #11212d;
+}
+
+header.rolagem a:hover { /* E ao passar o mouse em cima, mudam de cor */
+    color: var(--cor7); 
+}
+
+header ul{ /* Remove marcadores da lista de links no menu */
+    list-style-type: none;
+}
+
+header ul li{ /* Os itens do menu ficam lado a lado */
+
+    display: inline-block;
+    margin: 0 40px;
+    
+}
+
+header ul li a { /* Estilo dos links do menu */
+    color: #fff;
+    font-family: var(--fonte-medium);
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+    text-decoration: none;  /* Remove o sublinhado */
+}
+
+header ul li a:hover {
+    color: var(--cor);
+}
+
+
+.banner{ /* Seção principal com a imagem de fundo (banner do site) */
+    height: 100vh;
+    background-image: url(imagens/banner.jpg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.bnt-contato button{ /* Estilo do botão "Contato" no canto superior direito */
+  font-family: var(--fonte-book), sans-serif;
+  font-size: 15px; /* tamanho */
+  letter-spacing: 1px;  /* espaçamento entre as letras */
+  width: 120px; /* largura */
+  height: 35px; /* altura */
+  border: 0;
+  background-color: #ffffff; 
+  color: black;
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 13px;
+ }
+
+ .bnt-contato button:hover{ /* muda a cor quando passado o mouse em cima */
+    color: var(--cor7);
+}
+
+.rolagem button{
+    color: white;
+    background-color: var(--cor0);
+}
+
+ .titulo-centralizado {
+    color: var(--cor1);
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: var(--fonte-bold);
+    margin-top: 150px;
+    margin-bottom: 40px;
+    padding-top: 100;
+}
+
+.descricao_ {
+    color: var(--cor1);
+    font-size: 1.1rem;        /* Tamanho de fonte agradável */
+    text-align: justify;      /* Justifica o texto */
+    max-width: 800px;         /* Largura máxima para melhorar a leitura */
+    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
+    padding: 0 20px;          /* Espaçamento interno nas laterais */
+    font-family: var(--fonte-book); /* Fonte leve e confortável */
+    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
+}
+
+.servicos_prestado{
+    color: var(--cor1);
+    font-size: 1.1rem;        /* Tamanho de fonte agradável */
+    text-align: justify;      /* Justifica o texto */
+    max-width: 800px;         /* Largura máxima para melhorar a leitura */
+    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
+    padding: 0 20px;          /* Espaçamento interno nas laterais */
+    font-family: var(--fonte-book); /* Fonte leve e confortável */
+    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
+}
+
+.endereco {
+    color: var(--cor1);
+    font-size: 1.1rem;        /* Tamanho de fonte agradável */
+    text-align: justify;      /* Justifica o texto */
+    max-width: 800px;         /* Largura máxima para melhorar a leitura */
+    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
+    padding: 0 20px;          /* Espaçamento interno nas laterais */
+    font-family: var(--fonte-book); /* Fonte leve e confortável */
+    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
+}
+
+.links-contato{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor0);
+}
+
+.bloco-fundo {
+    background-color: #8C8C8C; /* ou #F0F0F0, #EDEDED... */
+    width: 85%;                    /* Um pouco maior que o conteúdo interno */
+    margin: auto;             /* Centraliza a div e dá espaçamento vertical */
+    padding: 100px 90px 200px 100px;            /* Espaço interno - margin: cima direita baixo esquerda */
+}
+
+footer {
+  font-size: 1rem;
+  background-color: #b1b0b0;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: var(--fonte-book);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+
+}
