@@ -1,62 +1,95 @@
- <!-- <!DOCTYPE html>
-<html lang="br-pt">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/imagens/favicon.png">
     <title>Silverio Arquitetura - Projetos e Laudos em Santo André</title>
-    <link rel="icon" type="image/x-icon" href="/imagens/favicon.png.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="imagens/LOGO_v2018.png" alt="Logo Silverio Arquitetura">
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="index2.html">
+                    <img src="imagens/logo-png.png" alt="Logo Silverio Arquitetura">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#projetos">PROJETOS</a></li>
+                        <li><a href="#portifolio">PORTIFÓLIO</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#contatos">CONTATO</a></li>
+
+                    </ul>
+                </nav>
+                <div class="bnt-contato">
+                    <a href=https://wa.me/5511963816166?text=Ol%C3%A1,%20tudo%20bem?%0A%0AEstou%20interessado(a)%20em%20fazer%20um%20or%C3%A7amento.%20Se%20poss%C3%ADvel,%20gostaria%20de%20saber%20valores,%20prazos%20e%20condi%C3%A7%C3%B5es. target="_blank"><button>Contato</button></a>
+                </div>
+            </div>
+        </div>
     </header>
-<nav>
-    <ul>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-    </ul>
-</nav>
 
-<main>
-    <article>
-        <h1 class="sobre">Sobre</h1>
-        <P>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores similique perspiciatis eligendi error. Pariatur officia asperiores, iste, accusamus perspiciatis, deleniti aliquam mollitia dolorum deserunt quas voluptatibus! Ratione, soluta voluptatum? Possimus.
-        </P>
-        <h1 class="contato">Contatos</h1>
-        <p>
-            Rua Betânia, 12<br>
-            Parque Novo Oratório – Santo André/SP<br>
-            Brasil CEP 00000-000<br>
-            +55 11 9 9802-7087 / +55 11 4975-5307<br>
-        </p>
-            
-        <p>
-            Fale conosco: <a class="links-contato" href="mailto:silvioluissilverio@terra.com.br">silvioluissilverio@terra.com.br</a>
-        </p>
+    <section class="banner"></section>
+    <main class="bloco-fundo">
 
-        <h1 class="servicos">Serviços</h1>
-        <ul>
-            <li>Laudos Técnicos</li>
-            <li>Aprovação de Projetos</li>
-            <li>Acompanhamento Técnico de Obras</li>
-        </ul>
-        <h1 class="portifolio">Portfólio</h1>
-        <P>
-            Fotos de projetos finalizados ou em andamento.<br>Pode separar por categorias: residencial, comercial, interiores, etc<br> Descrição simples de cada projeto (local, tipo de serviço, ano).
-        </P>
+    <section class="conteudo">
+        <div>
+            <h1 class="titulo-centralizado" id="projetos">Projetos</h1>
+            <P class="descricao_">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores similique perspiciatis eligendi error. Pariatur officia asperiores, iste, accusamus perspiciatis, deleniti aliquam mollitia dolorum deserunt quas voluptatibus! Ratione, soluta voluptatum? Possimus.
+            </P>
+        </div>
+    </section>
 
-    </article>
-</main>
-    
+    <section class="alo">
+        <div>
+            <h1 class="titulo-centralizado" id="portifolio">Portifólio</h1>
+            <P class="descricao_">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores similique perspiciatis eligendi error. Pariatur officia asperiores, iste, accusamus perspiciatis, deleniti aliquam mollitia dolorum deserunt quas voluptatibus! Ratione, soluta voluptatum? Possimus.
+            </P>
+        </div>
+    </section>
+
+    <section class="alo">
+        <div>
+            <h1 class="titulo-centralizado" id="sobre">Sobre</h1>
+            <P class="descricao_">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores similique perspiciatis eligendi error. Pariatur officia asperiores, iste, accusamus perspiciatis, deleniti aliquam mollitia dolorum deserunt quas voluptatibus! Ratione, soluta voluptatum? Possimus.
+            </P>
+        </div>
+    </section>
+
+    <section class="alo">
+            <div class="servicos_prestado" id="servicos">
+                <h1 class="titulo-centralizado">Serviços</h1>
+                <ul>
+                    <li>Laudos Técnicos</li>
+                    <li>Aprovação de Projetos</li>
+                    <li>Acompanhamento Técnico de Obras</li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="alo">
+            <div class="contato">
+                <h1 class="titulo-centralizado" id="contatos">Contatos</h1>
+                <p class="endereco">
+                    Rua Betânia, 12<br>
+                    Parque Novo Oratório – Santo André/SP<br>
+                    Brasil CEP 00000-000<br>
+                    +55 11 9 9802-7087 / +55 11 4975-5307<br>
+                    <br>
+                    Fale conosco: <a class="links-contato" href="mailto:silvioluissilverio@terra.com.br">silvioluissilverio@terra.com.br</a>
+                </p>
+            </div>
+    </section>    
+
+</main> 
+
     <footer>
-        <p>Site criado por <a href="https://github.com/devlaurentino" target="_blank">David Laurentino</a> para Silverio Arquitetura.</p>
+        <p>Site criado por <a href="https://github.com/devlaurentino" target="_blank">David Laurentino</a> para <strong>Silverio Arquitetura</strong> &copy;.</p>
     </footer>
+    <script src="menu.js"> </script>
 </body>
 </html>
-
-
--->
-
-casas
