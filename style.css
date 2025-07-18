@@ -1,58 +1,49 @@
 @charset "UTF-8";
-/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');*/
 
+/* FONTES PERSONALIZADAS */
 @font-face {
-    font-family: GothanBold;
-    src: url(fontes/Gotham-font/Gotham-Bold.otf) format(opentype);
-    font-weight: 700;
-    font-style: normal;
+  font-family: GothanBold;
+  src: url(fontes/Gotham-font/Gotham-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: GothanMedium;
-    src: url(fontes/Gotham-font/Gotham-Book.otf) format(opentype);
-    font-weight: 500;
-    font-style: normal;
+  font-family: GothanMedium;
+  src: url(fontes/Gotham-font/Gotham-Book.otf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: GothanBook;
-    src: url(fontes/Gotham-font/Gotham-Book.otf) format(opentype);
-    font-weight: 400;
-    font-style: normal;
+  font-family: GothanBook;
+  src: url(fontes/Gotham-font/Gotham-Book.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* VARIÁVEIS DE COR E FONTE */
 :root {
-    --cor0: #17182a;
-    --cor1: #FFFFFF;
-    --cor2: #F5F5F7;
-    --cor3: #C6C7D1;
-    --cor4: #585C7C;
-    --cor5: #3F7CAC;
-    --cor6: #A6DCEF;
-    --cor7: #D4A373;
-    --cor8: #06141b  ;
- /* Fontes padrão a serem usadas com var() */
---fonte-bold: 'GothanBold', sans-serif;
---fonte-medium: 'GothanMedium', sans-serif;
---fonte-book: 'GothanBook', sans-serif;
+  --cor0: #17182a;
+  --cor1: #ffffff;
+  --cor2: #f5f5f7;
+  --cor3: #c6c7d1;
+  --cor4: #585c7c;
+  --cor5: #3f7cac;
+  --cor6: #a6dcef;
+  --cor7: #d4a373;
+  --cor8: #06141b;
+
+  --fonte-bold: 'GothanBold', sans-serif;
+  --fonte-medium: 'GothanMedium', sans-serif;
+  --fonte-book: 'GothanBook', sans-serif;
 }
 
-
-*{ /* Reset básico de estilos: zera margens e paddings, ajusta box-sizing */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /*font-family: 'Poppins'; sans-serif;*/
-}
-
-header img { /* Define a altura da logo no cabeçalho */
-    height: 80px; /* ou o tamanho que preferir */
-}
-
-html { 
-/* Define uma altura grande da página para testar a rolagem */
-    height: 500vh;
+/* RESET GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -60,159 +51,148 @@ html {
   scroll-padding-top: 200px;
 }
 
-#titulo{
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 50px;
+body {
+  background-color: var(--cor0);
+  font-family: var(--fonte-book);
 }
 
-
-.container{ /* Define a largura máxima do conteúdo e centraliza */
-    max-width: 1280px;
-    margin: auto;
+/* CONTAINER CENTRAL */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 0 4%;
 }
 
-.flex{ /* Estiliza elementos com layout flexível (horizontal) */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* FLEX GERAL */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header{ /* Estilo básico do cabeçalho fixo no topo da tela */
-    width: 100%;
-    padding:  25px 4%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: .5s;
+/* HEADER FIXO */
+header {
+  width: 100%;
+  padding: 25px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: 0.5s;
 }
 
-header.rolagem{ /* Estilo do cabeçalho quando a página é rolada */
-    background-color: var(--cor2);
-    padding:  10px 4%;
+header.rolagem {
+  background-color: var(--cor2);
+  padding: 10px 4%;
 }
 
-header.rolagem a{ /* Links dentro do header ao rolar ficam com cor diferente */
-    color: #11212d;
+header img {
+  height: 80px;
 }
 
-header.rolagem a:hover { /* E ao passar o mouse em cima, mudam de cor */
-    color: var(--cor7); 
+header ul {
+  list-style: none;
 }
 
-header ul{ /* Remove marcadores da lista de links no menu */
-    list-style-type: none;
+header ul li {
+  display: inline-block;
+  margin: 0 20px;
 }
 
-header ul li{ /* Os itens do menu ficam lado a lado */
-
-    display: inline-block;
-    margin: 0 40px;
-    
-}
-
-header ul li a { /* Estilo dos links do menu */
-    color: #fff;
-    font-family: var(--fonte-medium);
-    font-size: 15px;
-    letter-spacing: 2px;
-    transition: color 0.3s;
-    text-decoration: none;  /* Remove o sublinhado */
+header ul li a {
+  color: var(--cor1);
+  font-family: var(--fonte-medium);
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 header ul li a:hover {
-    color: var(--cor);
+  color: var(--cor7);
 }
 
-
-.banner{ /* Seção principal com a imagem de fundo (banner do site) */
-    height: 100vh;
-    background-image: url(imagens/banner.jpg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+header.rolagem a {
+  color: #11212d;
 }
 
-.bnt-contato button{ /* Estilo do botão "Contato" no canto superior direito */
-  font-family: var(--fonte-book), sans-serif;
-  font-size: 15px; /* tamanho */
-  letter-spacing: 1px;  /* espaçamento entre as letras */
-  width: 120px; /* largura */
-  height: 35px; /* altura */
-  border: 0;
-  background-color: #ffffff; 
+header.rolagem a:hover {
+  color: var(--cor7);
+}
+
+/* BOTÃO CONTATO */
+.bnt-contato button {
+  font-family: var(--fonte-book);
+  font-size: 15px;
+  letter-spacing: 1px;
+  width: 120px;
+  height: 35px;
+  border: none;
+  background-color: #ffffff;
   color: black;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
   border-radius: 13px;
- }
-
- .bnt-contato button:hover{ /* muda a cor quando passado o mouse em cima */
-    color: var(--cor7);
 }
 
-.rolagem button{
-    color: white;
-    background-color: var(--cor0);
+.bnt-contato button:hover {
+  color: var(--cor7);
 }
 
- .titulo-centralizado {
-    color: var(--cor1);
-    font-size: 2.5rem;
-    text-align: center;
-    font-family: var(--fonte-bold);
-    margin-top: 150px;
-    margin-bottom: 40px;
-    padding-top: 100;
+.rolagem button {
+  color: white;
+  background-color: var(--cor0);
 }
 
-.descricao_ {
-    color: var(--cor1);
-    font-size: 1.1rem;        /* Tamanho de fonte agradável */
-    text-align: justify;      /* Justifica o texto */
-    max-width: 800px;         /* Largura máxima para melhorar a leitura */
-    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
-    padding: 0 20px;          /* Espaçamento interno nas laterais */
-    font-family: var(--fonte-book); /* Fonte leve e confortável */
-    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
+/* BANNER */
+.banner {
+  height: 100vh;
+  background-image: url(imagens/banner.jpg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.servicos_prestado{
-    color: var(--cor1);
-    font-size: 1.1rem;        /* Tamanho de fonte agradável */
-    text-align: justify;      /* Justifica o texto */
-    max-width: 800px;         /* Largura máxima para melhorar a leitura */
-    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
-    padding: 0 20px;          /* Espaçamento interno nas laterais */
-    font-family: var(--fonte-book); /* Fonte leve e confortável */
-    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
-}
-
-.endereco {
-    color: var(--cor1);
-    font-size: 1.1rem;        /* Tamanho de fonte agradável */
-    text-align: justify;      /* Justifica o texto */
-    max-width: 800px;         /* Largura máxima para melhorar a leitura */
-    margin: 0 auto 50px auto; /* Centraliza horizontalmente e dá espaço embaixo */
-    padding: 0 20px;          /* Espaçamento interno nas laterais */
-    font-family: var(--fonte-book); /* Fonte leve e confortável */
-    line-height: 1.6;         /* Altura entre linhas para melhor leitura */
-}
-
-.links-contato{
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--cor0);
-}
-
+/* BLOCO DE FUNDO DAS SEÇÕES */
 .bloco-fundo {
-    background-color: #8C8C8C; /* ou #F0F0F0, #EDEDED... */
-    width: 85%;                    /* Um pouco maior que o conteúdo interno */
-    margin: auto;             /* Centraliza a div e dá espaçamento vertical */
-    padding: 100px 90px 200px 100px;            /* Espaço interno - margin: cima direita baixo esquerda */
+  background-color: #8c8c8c;
+  width: 85%;
+  margin: auto;
+  padding: 100px 90px 200px 100px;
 }
 
+/* TÍTULOS */
+.titulo-centralizado {
+  color: var(--cor1);
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: var(--fonte-bold);
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+
+/* TEXTOS DAS SEÇÕES */
+.descricao_,
+.servicos_prestado,
+.endereco {
+  color: var(--cor1);
+  font-size: 1.1rem;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+  font-family: var(--fonte-book);
+  line-height: 1.6;
+}
+
+.links-contato {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--cor0);
+}
+
+/* FOOTER */
 footer {
   font-size: 1rem;
   background-color: #b1b0b0;
@@ -222,9 +202,113 @@ footer {
   font-family: var(--fonte-book);
 }
 
-footer a{
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
 
+/* ======================================== */
+/* 🔽 RESPONSIVIDADE - TELAS ATÉ 768PX */
+/* ======================================== */
+
+/* BOTÃO HAMBÚRGUER - Oculto no desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: var(--cor1);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+/* Esconde o menu por padrão no celular */
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor0);
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Exibe quando ativado */
+nav.ativo {
+  display: flex;
+}
+
+  .flex {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  header {
+    padding: 15px 5%;
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  header ul li {
+    margin: 0;
+  }
+
+  .bnt-contato {
+    margin-top: 10px;
+  }
+
+  .bnt-contato button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .bnt-contato button {
+  font-size: 13px;
+  padding: 10px 15px; /* cima/baixo | laterais */
+}
+
+  .banner {
+    height: 60vh;
+    background-position: center;
+  }
+
+  .titulo-centralizado {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+
+  .descricao_,
+  .servicos_prestado,
+  .endereco {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .bloco-fundo {
+    width: 95%;
+    padding: 40px 20px;
+  }
 }
