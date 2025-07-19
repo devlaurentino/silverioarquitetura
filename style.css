@@ -121,6 +121,30 @@ header.rolagem a:hover {
   color: var(--cor7);
 }
 
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* espaçamento entre os ícones */
+}
+
+.fa-brands.fa-instagram {
+font-size: 34px;
+color: white;
+}
+
+.fa-brands.fa-whatsapp{
+font-size: 30px;
+color: white;
+}
+
+.rolagem .fa-brands.fa-instagram{
+  color: var(--cor0);
+}
+
+.rolagem .fa-brands.fa-whatsapp{
+  color: var(--cor0);
+}
+
 /* BOTÃO CONTATO */
 .bnt-contato button {
   font-family: var(--fonte-book);
@@ -135,6 +159,7 @@ header.rolagem a:hover {
   transition: 0.2s;
   border-radius: 13px;
 }
+
 
 .bnt-contato button:hover {
   color: var(--cor7);
